@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <title>BRO</title>
+  <style>
+    iframe{
+     border: 0;
+          width: 100%;
+     height: 500px;
+    }
+  </style>
+</head> 
+ <body> 
+<hr>
+<input type="text" name="textbox1" id="textbox1" value="" style="width: 98%"/>
+<input type="submit" name="button" id="button1" onclick="myfunction()" value="Go!" />
+<hr>
+<script>
+var supp = "https://athdot.github.io/athtest"
+var ifrm = document.createElement("iframe");
+ifrm.setAttribute("src", supp);
+ifrm.setAttribute("id", "iframe");
+document.body.appendChild(ifrm);
+function myfunction() { 
+var first = document.getElementById("textbox1").value;
+if(first.substring(0,4) === "http"){
+var supp = first
+var element = document.getElementById("iframe");
+element.outerHTML = "";
+delete element;
+var ifrm = document.createElement("iframe");
+ifrm.setAttribute("src", supp);
+ifrm.setAttribute("id", "iframe");
+document.body.appendChild(ifrm);
+}else{
+alert("Incorrect URL")
+}
+var supp = first
+ } 
+</script>
+</body>
+</html>
