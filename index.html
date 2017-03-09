@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html> 
 <head> 
@@ -151,18 +150,18 @@ body {
   <nav id="context-menu" class="context-menu">
     <ul class="context-menu__items">
       <li class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="View"> View Task</a>
+        <a href="#" class="context-menu__link" data-action="View" onclick="source()"> View Page Source</a>
       </li>
       <li class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="Edit"> Edit Task</a>
+        <a href="#" class="context-menu__link" data-action="Edit" onclick="ntab()"> New Tab</a>
       </li>
       <li class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="Delete"> Delete Task</a>
+        <a href="#" class="context-menu__link" data-action="Delete" onclick="detail()"> Details</a>
       </li>
     </ul>
   </nav>
 <script>
-var supp = "https://athdot.github.io/athtest"
+var supp = "http://wetpussygames.com"
 var ifrm = document.getElementById("ov");
 ifrm.setAttribute("data", supp);
 document.body.appendChild(ifrm);
@@ -170,7 +169,7 @@ function myfunction() {
 var first = document.getElementById("textbox1").value;
 if(first.substring(0,4) === "http"){
 var supp = first
-var ifrm = document.getElementById("object");
+var ifrm = document.getElementById("ov");
 ifrm.setAttribute("data", supp);
 document.body.appendChild(txt);
 }else{
@@ -178,6 +177,21 @@ alert("Incorrect URL")
 }
 var supp = first
  } 
+function source() {
+var ifrm = document.getElementById("ov");
+ifrm.setAttribute("data", "http://mysexgames.com");
+document.body.appendChild(txt);
+}
+function ntab() {
+var ifrm = document.getElementById("ov");
+ifrm.setAttribute("data", "http://wetpussygames.com");
+document.body.appendChild(txt);
+}
+function detail() {
+var ifrm = document.getElementById("ov");
+ifrm.setAttribute("data", "http://porngames.com");
+document.body.appendChild(txt);
+}
 (function() {
   
   "use strict";
