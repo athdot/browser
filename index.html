@@ -1,3 +1,44 @@
-<html>
-  <iframe src="http://porngames.com"></iframe>
-</html>
+<!DOCTYPE html>
+<html> 
+<head> 
+  <meta charset="UTF-8">
+  <title>AthBrowse</title>
+  <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300">
+    <link rel="stylesheet" href="/set.css">
+</head> 
+ <body> 
+  <header class="primary-header">
+    <div class="container">
+    </div>
+  </header>
+  <main class="content">
+    <div class="container">
+      <ul class="tasks">
+        <li class="task" data-id="3">
+<input type="text" name="textbox1" value="Search" style="width: 96%"></input>
+<input type="submit" name="button" id="button1" onclick="myfunction()" value="Go!" />
+        </li>
+        <li class="task" data-id="2">
+<object id="ov" data=""></object>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <nav id="context-menu" class="context-menu">
+    <ul class="context-menu__items">
+      <li class="context-menu__item">
+        <a href="#" class="context-menu__link" data-action="View" onclick="source()"> View Page Source</a>
+      </li>
+      <li class="context-menu__item">
+        <a href="#" class="context-menu__link" data-action="Edit" onclick="ntab()"> New Tab</a>
+      </li>
+      <li class="context-menu__item">
+        <a href="#" class="context-menu__link" data-action="Delete" onclick="detail()"> Details</a>
+      </li>
+    </ul>
+  </nav>
+<script src="/browser.js"></script>
+</body>
+ </html>
