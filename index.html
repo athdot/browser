@@ -1,44 +1,92 @@
 <!DOCTYPE html>
-<html> 
-<head> 
-  <meta charset="UTF-8">
-  <title>AthBrowse</title>
-  <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300">
-    <link rel="stylesheet" href="set.css">
-</head> 
- <body> 
-  <header class="primary-header">
-    <div class="container">
-    </div>
-  </header>
-  <main class="content">
-    <div class="container">
-      <ul class="tasks">
-        <li class="task" data-id="3">
-<input type="text" name="textbox1" value="Search" style="width: 96%"></input>
-<input type="submit" name="button" id="button1" onclick="myfunction()" value="Go!" />
-        </li>
-        <li class="task" data-id="2">
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BRO</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<style>
+  .colour {
+  background-color: white;
+border: none;
+color: #008CBA;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+width: 100%
+}
+    object{
+     border: 0;
+          width: 100%;
+     height: 750px;
+    }
+</style>
+</head>
+<body>
+<div id="dialog" title="Menu">
+  <p id="beg"><button onclick="source()" class="colour">View Page Source</button><br><button onclick="ntab()" class="colour">New Tab</button><br><button onclick="detail()" class="colour">About</button></p>
+</div>
+<input type="text" name="txt1" value="Search" style="width: 96%" id="txt1"></input>
+<input type="submit" name="button" id="button1" onclick="myfunction()" style="width: 3.5%" value="Go!" />
+<br>
 <object id="ov" data=""></object>
-        </li>
-      </ul>
-    </div>
-  </main>
-  <nav id="context-menu" class="context-menu">
-    <ul class="context-menu__items">
-      <li class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="View" onclick="source()"> View Page Source</a>
-      </li>
-      <li class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="Edit" onclick="ntab()"> New Tab</a>
-      </li>
-      <li class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="Delete" onclick="detail()"> Details</a>
-      </li>
-    </ul>
-  </nav>
-<script src="browser.js"></script>
+<script>
+var supp = "https://athdot.github.io/athtest"
+var ifrm = document.getElementById("ov");
+ifrm.setAttribute("data", supp);
+document.body.appendChild(ifrm);
+function myfunction() { 
+var first = document.getElementById('txt1').value;
+if(first.substring(0,4) === "http"){
+var supp = first
+var ifrm = document.getElementById("ov");
+ifrm.setAttribute("data", supp);
+document.body.appendChild(ifrm);
+}else{
+alert("Incorrect URL")
+}
+var supp = first
+ } 
+function source() {
+var ifrm = document.getElementById("ov");
+ifrm.setAttribute("data", "http://www.submitexpress.com/page-snooper.html");
+document.body.appendChild(ifrm);
+}
+function ntab() {
+var ifrm = document.getElementById("ov");
+ifrm.setAttribute("data", "https://athdot.github.io/athtest/");
+document.body.appendChild(ifrm);
+}
+function detail() {
+alert("Version 2.2.4 Made by Athdot")
+}
+document.getElementById('beg').style.display="none"
+$(document).bind('keydown',function(e){
+    if(e.keyCode == 17) {
+        $(document).bind('keydown',function(f){
+    if(f.keyCode == 16) {
+        $(document).bind('keydown',function(g){
+    if(g.keyCode == 77) {
+{
+
+document.getElementById('beg').style.display=""
+    $( function() {
+    $( "#dialog" ).dialog();
+  } );
+
+}
+    }
+});
+    }
+});
+    }
+});
+</script>
 </body>
- </html>
+</html>
