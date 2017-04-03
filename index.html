@@ -13,7 +13,7 @@
 <button onclick="search()">Search</button>
 </div>
 <div class="page-frame">
-<iframe src="https://athdot.github.io/browser/home.html" id="content" style="" onload="document.getElementById('search').setAttribute('value',document.getElementById('content').src)"></iframe>
+<iframe src="https://athdot.github.io/browser/home.html" id="content" style="" onload="document.getElementById('search').setAttribute('value',(this.contentWindow.location.href))"></iframe>
 </div>
 </div>
 <script>
