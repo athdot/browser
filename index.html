@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+font-family: Verdana, Geneva, sans-serif;
+}
+.content{
+
+}
+.tabs {
+background-color: lightgrey;
+position:absolute;
+top:0;
+left: 0;
+width: 100%;
+height: 30px;
+}
+.search-bar {
+position:absolute;
+top: 30px;
+left: 0px;
+height: 43px;
+width:100%;
+background-color: grey;
+box-shadow: 0px 5px 25px #888888;
+}
+.search-bar input{
+position:absolute;
+width: 95%;
+left: 0px;
+top: 10px;
+font-family: Verdana, Geneva, sans-serif;
+}
+.search-bar button{
+position:absolute;
+right: 0px;
+width: 5%;
+top: 10px;
+}
+.page-frame iframe{
+width: 100%;
+position:absolute;
+top: 90px;
+left: 0px;
+border: 0px;
+}
+</style>
+</head>
+<body>
+<div class="content">
+<div class="tabs">
+
+</div>
+<div class="search-bar">
+<input type="text" value="Search" id="search" />
+<button onclick="search()">Search</button>
+</div>
+<div class="page-frame">
+<iframe src="https://athdot.github.io/browserhome" id="content" style=""></iframe>
+</div>
+</div>
+<script>
+//input editor
+
+//end input editor
+//iframe
+ window.addEventListener('resize', function(event){
+      var height = ((window.innerHeight)-100);
+document.getElementById('content').setAttribute('style','height: ' + height + 'px;')
+});
+      var height = ((window.innerHeight)-100);
+document.getElementById('content').setAttribute('style','height: ' + height + 'px;')
+var wage = document.getElementById("search");
+wage.addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+        validate(e);
+    }
+});
+
+function validate(e) {
+var location = document.getElementById('search').value;
+document.getElementById('content').setAttribute('src',location);
+document.getElementById('search').setAttribute('value',location);
+}
+function search(){
+var location = document.getElementById('search').value;
+document.getElementById('content').setAttribute('src',location);
+document.getElementById('search').setAttribute('value',location);
+}
+//iframe end
+//tabs
+
+//tabs end
+</script>
+</body>
+</html>
