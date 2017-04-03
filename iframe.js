@@ -1,9 +1,3 @@
- window.addEventListener('resize', function(event){
-      var height = ((window.innerHeight)-100);
-document.getElementById('content').setAttribute('style','height: ' + height + 'px;')
-});
-      var height = ((window.innerHeight)-100);
-document.getElementById('content').setAttribute('style','height: ' + height + 'px;')
 var wage = document.getElementById("search");
 wage.addEventListener("keydown", function (e) {
     if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
