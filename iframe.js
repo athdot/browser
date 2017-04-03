@@ -1,8 +1,7 @@
 var wage = document.getElementById("search");
 wage.addEventListener("keydown", function (e) {
-    if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+    if (e.keyCode === 13) {
         validate(e);
-        return;
     }
 });
 function validate(e) {
